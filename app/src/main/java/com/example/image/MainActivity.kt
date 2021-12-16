@@ -11,6 +11,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
     private val REQUEST_GALLERY_TAKE = 2
@@ -18,6 +20,8 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var storage_iv: ImageView
     private lateinit var storage_btn: Button
+
+//    val db = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
