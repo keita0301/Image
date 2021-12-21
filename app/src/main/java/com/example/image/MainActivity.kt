@@ -21,14 +21,12 @@ class MainActivity : AppCompatActivity() {
     private lateinit var storage_iv: ImageView
     private lateinit var storage_btn: Button
 
-//    val db = Firebase.firestore
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        storage_iv = findViewById<ImageView>(R.id.storage_iv)
-        storage_btn = findViewById<Button>(R.id.storage_btn)
+        storage_iv = findViewById(R.id.storage_iv)
+        storage_btn = findViewById(R.id.storage_btn)
         setupPermissions()
 
         //EditTextのクリックイベントを設定
@@ -49,7 +47,6 @@ class MainActivity : AppCompatActivity() {
     // onActivityResultにイメージ設定
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-
         when (requestCode){
             2 -> {
                 if (resultCode == Activity.RESULT_OK && requestCode == REQUEST_GALLERY_TAKE){
